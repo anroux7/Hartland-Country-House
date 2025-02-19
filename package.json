@@ -1,0 +1,15 @@
+{
+  "name": "hartland-country-house",
+  "version": "1.0.0",
+  "description": "Hartland Country House Air B&amp;B Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
