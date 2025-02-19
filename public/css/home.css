@@ -1,0 +1,41 @@
+.welcome {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    overflow: hidden;
+    
+}
+
+/* Center Content */
+.welcome-container {
+    max-width: 800px;
+    z-index: 2; 
+}
+
+.welcome h1 {
+    margin-bottom: 1rem;
+}
+
+.welcome p {
+    margin-bottom: 1.5rem;
+}
+
+/* Palm Leaf Styling */
+.palm-left, .palm-right {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none; 
+}
+
+.palm-left {
+    left: -8%; 
+    bottom: 0;
+    max-width: 520px; 
+}
+
+.palm-right {
+    right: -8%;
+    max-width: 620px; 
+}
