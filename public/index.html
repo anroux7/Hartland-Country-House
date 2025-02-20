@@ -99,7 +99,7 @@
     <main>
       <!-- Hero/carousel -->
       <section class="carousel-container">
-        <div class="carousel-container">
+        <div>
           <button class="carousel-prev" aria-label="Previous">&#10094;</button>
           <div class="carousel">
             <img
@@ -151,20 +151,291 @@
 
       <!-- Welcome Section -->
       <section class="welcome">
-        <img src="./assets/palm-illustration.png" alt="Palm illustration" class="palm-left" />
+        <img
+          src="./assets/images/background-images/palm-illustration.png"
+          alt="Palm illustration"
+          class="palm-left"
+        />
         <div class="welcome-container">
           <img src="./assets/logo-image.png" alt="Hartland Logo" />
           <h1>Welcome to Hartland Country House</h1>
           <p>
-            Nestled in the heart of Oudtshoorn, Hartland is a breathtaking French Country House that
-            epitomizes elegance and tranquility. Set on an expansive estate, this extraordinary sanctuary
-            offers an escape like no other. Whether bathed in the golden sun of summer, with a sparkling
-            15-meter swimming pool inviting you to relax and unwind, or during the cozy, crisp winter
-            months, where an inviting indoor fireplace cast a warm glow, Hartland promises an experience that enchants year-round. 
+            Nestled in the heart of Oudtshoorn, Hartland is a breathtaking
+            French Country House that epitomizes elegance and tranquility. Set
+            on an expansive estate, this extraordinary sanctuary offers an
+            escape like no other. Whether bathed in the golden sun of summer,
+            with a sparkling 15-meter swimming pool inviting you to relax and
+            unwind, or during the cozy, crisp winter months, where an inviting
+            indoor fireplace cast a warm glow, Hartland promises an experience
+            that enchants year-round.
           </p>
           <a href="#" class="btn btn-primary">Book Now</a>
         </div>
-        <img src="./assets/double-palm-illustration.png" alt="Palm illustration" class="palm-right" />
+        <img
+          src="./assets/images/background-images/double-palm-illustration.png"
+          alt="Palm illustration"
+          class="palm-right"
+        />
+      </section>
+
+      <section class="property-video">
+        <video autoplay loop muted>
+          <source
+            alt="Property Zoom-in video"
+            src="./assets/images/background-images/property-zoom.MP4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <!-- Accommodation Section -->
+      <section class="accommodation">
+        <img
+          src="./assets/images/background-images/palm-illustration.png"
+          alt="Palm illustration"
+          class="palm-leaf"
+        />
+        <div class="accommodtion-container">
+          <h2>A home away from Home</h2>
+          <div class="small-carousel-container">
+            <button class="small-carousel-prev">&#10094;</button>
+            <div class="caption">Click on any of the images to enlarge</div>
+            <div class="small-carousel">
+              <img
+                src="./assets/images/home-small-carousel/Bedroom1.jpg"
+                alt="Room 1"
+              />
+              <img
+                src="./assets/images/home-small-carousel/Bedroom2.jpg"
+                alt="Room 2"
+              />
+              <img
+                src="./assets/images/home-small-carousel/Bedroom3.jpg"
+                alt="Room 3"
+              />
+              <img
+                src="./assets/images/home-small-carousel/Bedroom4.png"
+                alt="Room 4"
+              />
+              <img
+                src="./assets/images/home-small-carousel/Bedroom5.jpg"
+                alt="Room 5"
+              />
+              <img
+                src="./assets/images/home-small-carousel/Bedroom6.jpg"
+                alt="Room 6"
+              />
+              <img
+                src="./assets/images/home-small-carousel/swing.jpg"
+                alt="Swing"
+              />
+              <img
+                src="./assets/images/home-small-carousel/stairs.jpg"
+                alt="Stairs"
+              />
+              <img
+                src="./assets/images/home-small-carousel/bathroom.jpg"
+                alt="Bathroom"
+              />
+            </div>
+            <button class="small-carousel-next">&#10095;</button>
+            <div class="small-carousel-dots"></div>
+          </div>
+
+          <!-- Lightbox container (hidden initially) -->
+          <div class="lightbox" id="small-lightbox">
+            <img id="small-lightbox-image" class="lightbox-image" />
+            <button class="small-lightbox-prev" aria-label="Previous">
+              &#10094;
+            </button>
+            <button class="small-lightbox-next" aria-label="Next">
+              &#10095;
+            </button>
+            <span class="small-lightbox-close" id="small-lightbox-close"
+              >&times;</span
+            >
+          </div>
+          <p>
+            Boasting 5 exquisitely appointed bedrooms, including 4 with
+            luxurious ensuites, and an additional bedroom with a bathroom just
+            across the hall, this home effortlessly combines comfort and
+            sophistication. The interiors are adorned with tasteful décor, while
+            the fully equipped kitchen and spacious living room create a
+            welcoming atmosphere for both intimate gatherings and grand
+            celebrations. Step outside onto the stunning stoep, where panoramic
+            views of the pool and sprawling estate are framed by the lush beauty
+            of ancient olive trees, offering the perfect backdrop for al fresco
+            dining or quiet reflection. The grounds are a wonder in themselves,
+            with abundant picnic spots for unforgettable family moments and a
+            delightful jungle gym to keep the little ones entertained. Hartland
+            is more than just a home—it’s a captivating retreat, where nature,
+            luxury, and comfort come together in perfect harmony. Every detail
+            of this magical property invites you to relax, rejuvenate, and
+            experience the very best of countryside living.
+          </p>
+          <a href="#" class="btn btn-secondary">Explore More</a>
+        </div>
+      </section>
+
+      <!-- Ammenities Section -->
+      <section class="ammenities">
+        <img
+          src="./assets/images/background-images/Kitchen.png"
+          class="kitchen-background"
+          alt="Kitchen"
+        />
+        <div class="ammenities-container">
+          <h2>Relax and Enjoy</h2>
+          <div class="card-container">
+            <div class="card">
+              <h3>Room Amenities</h3>
+              <ul class="custom-bullets">
+                <li>Socket near the bed</li>
+                <li>Drying rack for clothing</li>
+                <li>Private bathroom</li>
+                <li>Clothes rack</li>
+                <li>Hypoallergenic</li>
+                <li>Mosquito net</li>
+                <li>Soundproof</li>
+                <li>Private entrance</li>
+                <li>Interconnecting room/s available</li>
+                <li>Bathtub</li>
+                <li>Fan</li>
+                <li>Ironing facilities</li>
+                <li>Air conditioning</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Kitchen</h3>
+              <ul class="custom-bullets">
+                <li>Dining table</li>
+                <li>Coffee machine</li>
+                <li>Cleaning products</li>
+                <li>Toaster</li>
+                <li>Stovetop</li>
+                <li>Oven</li>
+                <li>Kitchenware</li>
+                <li>Electric kettle</li>
+                <li>Dryer</li>
+                <li>Kitchen</li>
+                <li>Washing machine</li>
+                <li>Dishwasher</li>
+                <li>Microwave</li>
+                <li>Refrigerator</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Outdoors</h3>
+              <ul class="custom-bullets">
+                <li>Outdoor fireplace</li>
+                <li>Picnic area</li>
+                <li>Outdoor furniture</li>
+                <li>Outdoor dining area</li>
+                <li>Sun deck</li>
+                <li>Barbecue</li>
+                <li>Private pool</li>
+                <li>BBQ facilities</li>
+                <li>Patio</li>
+                <li>Terrace</li>
+                <li>Garden</li>
+                <li>Balcony</li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-columns">
+                <ul>
+                  <h3>Parking</h3>
+                  <p>Free private parking is available on site.</p>
+                  <br />
+                  <h3>Internet</h3>
+                  <p>Wi-Fi is available in the rooms and is free of charge.</p>
+                </ul>
+
+                <ul>
+                  <h3>Pets</h3>
+                  <p>Pets are allowed on request. No extra charges.</p>
+                  <br />
+                  <h3>Accessibility</h3>
+                  <p>Upper floors accessible by stairs only</p>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section class="gallery-section">
+        <h2>Picture-Perfect Stays</h2>
+        <div class="caption">Click on any of the images to enlarge</div>
+        <img
+          src="./assets/images/background-images/double-palm-illustration.png"
+          alt="Palm illustration"
+          class="palm-background-left"
+        />
+        <img
+          src="./assets/images/background-images/double-palm-illustration.png"
+          alt="Palm illustration"
+          class="palm-background-right"
+        />
+        <div class="gallery">
+          <img
+            src="./assets/images/gallery/image1.jpg"
+            alt="Image 1"
+            class="gallery-image"
+          />
+          <img
+            src="./assets/images/gallery/image2.jpeg"
+            alt="Image 2"
+            class="gallery-image"
+          />
+          <img
+            src="./assets/images/gallery/image3.png"
+            alt="Image 3"
+            class="gallery-image"
+          />
+          <img
+            src="./assets/images/gallery/image4.jpeg"
+            alt="Image 4"
+            class="gallery-image"
+          />
+          <img
+            src="./assets/images/gallery/image5.png"
+            alt="Image 5"
+            class="gallery-image"
+          />
+          <img
+            src="./assets/images/gallery/image6.jpeg"
+            alt="Image 6"
+            class="gallery-image"
+          />
+          <img
+            src="./assets/images/gallery/image7.jpg"
+            alt="Image 7"
+            class="gallery-image"
+          />
+          <img
+            src="./assets/images/gallery/image8.png"
+            alt="Image 8"
+            class="gallery-image"
+          />
+          <img
+            src="./assets/images/gallery/image9.jpg"
+            alt="Image 9"
+            class="gallery-image"
+          />
+        </div>
+        <!-- Lightbox Container -->
+        <div class="gallery-lightbox" id="gallery-lightbox">
+          <span class="close-gallery-lightbox">&times;</span>
+          <img
+            class="gallery-lightbox-image"
+            id="gallery-lightbox-image"
+            src=""
+            alt=""
+          />
+        </div>
       </section>
     </main>
 
