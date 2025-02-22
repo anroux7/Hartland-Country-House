@@ -1,3 +1,15 @@
+/***
+
+This file contains shared styles for components across pages:
+- Navbar
+- Footer
+- Big carousel
+- Small carouel
+- Buttons
+- Uilities (cards, bullet lists, etc.)
+
+***/
+
 * {
   padding: 0;
   margin: 0;
@@ -189,6 +201,7 @@ body {
 .navbar:hover .header-icons .icon img {
   filter: invert(1);
 }
+
 
 /* Carousel Container - Full Screen */
 .carousel-container {
@@ -431,54 +444,6 @@ body {
 }
 
 
-/* Gallery */
-.gallery-section {
-  padding: 60px 18%;
-}
-.gallery {
-  display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-}
-.gallery img {
-  width: 100%;
-    height: 400px; /* Adjust the height as needed */
-    object-fit: cover;
-    border-radius: 8px;
-    z-index: 1000;
-}
-.gallery img:hover {
-  transform: scale(1.05);
-}
-/* Lightbox styling */
-.gallery-lightbox {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
-  z-index: 10000;
-}
-
-.gallery-lightbox-image {
-  max-width: 90%;
-  max-height: 90%;
-}
-
-.close-gallery-lightbox {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-}
-
-
 /* Footer */
 .footer {
   background-color: var(--secondary-colour);
@@ -493,7 +458,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .footer-logo img {
   width: 200px;
   height: 100%;
@@ -576,6 +540,7 @@ body {
   color: #bbb;
 }
 
+
 /* Buttons */
 .btn {
   color: var(--primary-colour);
@@ -605,6 +570,7 @@ body {
 .btn-secondary:hover {
   background: #d0d3eb;
 }
+
 
 /* Utilities */
 .custom-bullets {
@@ -656,6 +622,15 @@ body {
   .footer-contact h4 {
     font-size: 1rem;
   }
+  .small-carousel-container {
+    position: relative;
+    width: calc(100% + 16%); 
+    margin-left: -8%;
+    margin-bottom: 2rem;
+  }
+  .small-carousel img {
+    width: calc(100% / 2);
+  }
 }
 
 @media (max-width: 768px) {
@@ -687,6 +662,17 @@ body {
   .footer-links,
   .footer-contact {
     text-align: center;
+  }
+  .small-carousel img {
+    width: 100%; /* Full width for better visibility */
+  }
+
+  /* Adjust navigation buttons */
+  .small-carousel-prev,
+  .small-carousel-next {
+    height: 40px;
+    width: 40px;
+    font-size: medium;
   }
 }
 

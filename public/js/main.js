@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 /*** NAVBAR COLOUR CHANGE ON SCROLL ***/
 window.addEventListener("scroll", function () {
   const navbar = document.getElementById("navbar");
@@ -22,7 +21,6 @@ window.addEventListener("scroll", function () {
     navbar.classList.remove("scrolled");
   }
 });
-
 
 /*** BIG CAROUSEL ***/
 const prevButton = document.querySelector(".carousel-prev");
@@ -141,7 +139,6 @@ setInterval(showNextImage, 7000);
 createDots();
 updateCarousel();
 
-
 /*** SMALL CAROUSEL ***/
 document.addEventListener("DOMContentLoaded", function () {
   // Small Carousel
@@ -252,7 +249,6 @@ document.addEventListener("DOMContentLoaded", function () {
   createSmallDots();
   updateSmallCarousel();
 });
-
 
 /*** GALLERY LIGHTBOX ***/
 document.addEventListener("DOMContentLoaded", function () {
