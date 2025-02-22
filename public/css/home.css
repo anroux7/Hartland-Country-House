@@ -188,7 +188,7 @@
   padding: 30px 14%;
 }
 .location-container {
-  z-index: 10000;
+  z-index: 1000;
   width: 100%;
 }
 .location-container iframe {
