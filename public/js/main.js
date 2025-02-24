@@ -7,22 +7,33 @@ document.addEventListener("DOMContentLoaded", function () {
     mobileMenu.classList.toggle("active");
     menuToggle.classList.toggle("open");
   });
-});
 
-/*** NAVBAR COLOUR CHANGE ON SCROLL ***/
-window.addEventListener("scroll", function () {
+  /*** NAVBAR COLOUR CHANGE ON SCROLL ***/
   const navbar = document.getElementById("navbar");
   const heroSection = document.querySelector(".carousel-container");
-  const heroHeight = heroSection.offsetHeight;
+  const isHomePage = window.location.pathname.endsWith("index.html") || window.location.pathname === "/";
 
-  if (window.scrollY > heroHeight) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
+  function updateNavbar() {
+    if (isHomePage && heroSection) {
+      const heroHeight = heroSection.offsetHeight;
+
+      if (window.scrollY > heroHeight) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled"); // Transparent navbar on hero
+      }
+    } else {
+      navbar.classList.add("scrolled"); // Always black/white on other pages
+    }
   }
+
+  window.addEventListener("scroll", updateNavbar);
+
+  updateNavbar();
 });
 
 /*** BIG CAROUSEL ***/
+document.addEventListener("DOMContentLoaded", function () {
 const prevButton = document.querySelector(".carousel-prev");
 const nextButton = document.querySelector(".carousel-next");
 const carousel = document.querySelector(".carousel");
@@ -138,10 +149,11 @@ setInterval(showNextImage, 7000);
 // Create and display dots for the carousel
 createDots();
 updateCarousel();
+});
+
 
 /*** SMALL CAROUSEL ***/
 document.addEventListener("DOMContentLoaded", function () {
-  // Small Carousel
   const smallCarousel = document.querySelector(".small-carousel");
   const smallPrev = document.querySelector(".small-carousel-prev");
   const smallNext = document.querySelector(".small-carousel-next");
@@ -249,6 +261,7 @@ document.addEventListener("DOMContentLoaded", function () {
   createSmallDots();
   updateSmallCarousel();
 });
+
 
 /*** GALLERY LIGHTBOX ***/
 document.addEventListener("DOMContentLoaded", function () {
