@@ -1,0 +1,16 @@
+name = "hartland-country-house"
+type = "javascript"
+
+account_id = "anrouxboer@gmail.com"
+workers_dev = true
+
+[build]
+command = "npm install"
+upload.dir = "public"
+
+[dev]
+port = 8787
+
+[env.production]
+route = "hartlandcountryhouse.co.za/*"
+zone_id = "de7d1eba501552a48069752add3ef9cb"
