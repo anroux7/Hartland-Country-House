@@ -1,4 +1,5 @@
 name = "hartland-country-house-production"
+main = "server.js"
 type = "javascript"
 
 account_id = "anrouxboer@gmail.com"
