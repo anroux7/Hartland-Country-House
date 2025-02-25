@@ -9,9 +9,6 @@ workers_dev = true
 command = "npm install"
 upload.dir = "public"
 
-[dev]
-port = 8787
-
-[env.production]
+[production]
 route = "hartlandcountryhouse.co.za/*"
 zone_id = "de7d1eba501552a48069752add3ef9cb"
