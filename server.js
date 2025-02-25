@@ -1,13 +1,13 @@
 export default {
-  async fetch(request) {
+  async fetch(request, env, ctx) {
     let url = new URL(request.url);
     
-    // Serve static files from the "public" directory
+    // Serve index.html for the root path
     if (url.pathname === "/") {
-      return new Response(await fetch("https://hartlandcountryhouse.co.za/public/index.html"));
+      return fetch("https://hartlandcountryhouse.co.za/public/index.html");
     }
 
-    // Default response
-    return new Response("404 Not Found", { status: 404 });
+    // Serve other static files (JS, CSS, Images)
+    return fetch(`https://hartlandcountryhouse.co.za/public${url.pathname}`);
   }
 };
