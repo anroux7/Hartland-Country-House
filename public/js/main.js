@@ -37,6 +37,29 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+/*** SCROLL TO TOP BUTTON ***/
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollToTopBtn = document.createElement("button");
+  scrollToTopBtn.id = "scrollToTopBtn";
+  scrollToTopBtn.innerHTML = "&#8679;";
+  document.body.appendChild(scrollToTopBtn);
+
+  window.addEventListener("scroll", function () {
+      if (window.scrollY > 1200) {
+          scrollToTopBtn.classList.add("show");
+      } else {
+          scrollToTopBtn.classList.remove("show");
+      }
+  });
+
+  scrollToTopBtn.addEventListener("click", function () {
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+      });
+  });
+});
+
 /**  */
 document.addEventListener("DOMContentLoaded", function () {
   const images = document.querySelectorAll("img[data-src]");
