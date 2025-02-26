@@ -37,6 +37,24 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+/**  */
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll("img[data-src]");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src;
+        img.removeAttribute("data-src");
+        observer.unobserve(img);
+      }
+    });
+  });
+
+  images.forEach(img => observer.observe(img));
+});
+
 /*** BIG CAROUSEL ***/
 document.addEventListener("DOMContentLoaded", function () {
   const prevButton = document.querySelector(".carousel-prev");
@@ -180,15 +198,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const smallCarousels = document.querySelectorAll(".small-carousel");
 
   smallCarousels.forEach((smallCarousel, carouselIndex) => {
-    const smallPrev = smallCarousel.parentElement.querySelector(".small-carousel-prev");
-    const smallNext = smallCarousel.parentElement.querySelector(".small-carousel-next");
-    const smallDotsContainer = smallCarousel.parentElement.querySelector(".small-carousel-dots");
+    const smallPrev = smallCarousel.parentElement.querySelector(
+      ".small-carousel-prev"
+    );
+    const smallNext = smallCarousel.parentElement.querySelector(
+      ".small-carousel-next"
+    );
+    const smallDotsContainer = smallCarousel.parentElement.querySelector(
+      ".small-carousel-dots"
+    );
     const smallImages = smallCarousel.querySelectorAll("img");
 
     let smallCurrentIndex = 0;
     let smallImagesPerView = getImagesPerView(); // Dynamically set images per view
     const smallTotalImages = smallImages.length;
-    let totalDots = Math.max(1, Math.ceil(smallTotalImages / smallImagesPerView));
+    let totalDots = Math.max(
+      1,
+      Math.ceil(smallTotalImages / smallImagesPerView)
+    );
 
     // Create a unique lightbox for each carousel
     const smallLightbox = document.createElement("div");
@@ -205,10 +232,18 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
     document.body.appendChild(smallLightbox);
 
-    const smallLightboxImage = smallLightbox.querySelector(".small-lightbox-image");
-    const smallLightboxClose = smallLightbox.querySelector(".small-lightbox-close");
-    const smallLightboxPrev = smallLightbox.querySelector(".small-lightbox-prev");
-    const smallLightboxNext = smallLightbox.querySelector(".small-lightbox-next");
+    const smallLightboxImage = smallLightbox.querySelector(
+      ".small-lightbox-image"
+    );
+    const smallLightboxClose = smallLightbox.querySelector(
+      ".small-lightbox-close"
+    );
+    const smallLightboxPrev = smallLightbox.querySelector(
+      ".small-lightbox-prev"
+    );
+    const smallLightboxNext = smallLightbox.querySelector(
+      ".small-lightbox-next"
+    );
 
     function getImagesPerView() {
       if (window.matchMedia("(max-width: 768px)").matches) {
@@ -254,12 +289,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function showSmallPrevImage() {
-      smallCurrentIndex = smallCurrentIndex === 0 ? totalDots - 1 : smallCurrentIndex - 1;
+      smallCurrentIndex =
+        smallCurrentIndex === 0 ? totalDots - 1 : smallCurrentIndex - 1;
       updateSmallCarousel();
     }
 
     function showSmallNextImage() {
-      smallCurrentIndex = smallCurrentIndex === totalDots - 1 ? 0 : smallCurrentIndex + 1;
+      smallCurrentIndex =
+        smallCurrentIndex === totalDots - 1 ? 0 : smallCurrentIndex + 1;
       updateSmallCarousel();
     }
 
@@ -281,12 +318,18 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       smallLightboxPrev.addEventListener("click", () => {
-        smallCurrentIndex = smallCurrentIndex === 0 ? smallImages.length - 1 : smallCurrentIndex - 1;
+        smallCurrentIndex =
+          smallCurrentIndex === 0
+            ? smallImages.length - 1
+            : smallCurrentIndex - 1;
         smallLightboxImage.src = smallImages[smallCurrentIndex].src;
       });
 
       smallLightboxNext.addEventListener("click", () => {
-        smallCurrentIndex = smallCurrentIndex === smallImages.length - 1 ? 0 : smallCurrentIndex + 1;
+        smallCurrentIndex =
+          smallCurrentIndex === smallImages.length - 1
+            ? 0
+            : smallCurrentIndex + 1;
         smallLightboxImage.src = smallImages[smallCurrentIndex].src;
       });
 
@@ -309,7 +352,6 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("resize", updateSmallCarousel);
   });
 });
-
 
 /*** GALLERY LIGHTBOX ***/
 document.addEventListener("DOMContentLoaded", function () {
