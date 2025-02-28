@@ -364,19 +364,21 @@ body {
   height: auto; 
   z-index: 1000;
   margin-bottom: 2rem;
+  padding-left: 9px;
 }
 .small-carousel {
   display: flex;
   transition: transform 0.3s ease-in-out;
+  gap: 10px;
 }
 .small-carousel img {
-  width: calc(100% / var(--items-per-view));
+  width: calc((100% / var(--items-per-view)) - 10px);
   cursor: pointer;
   max-height: 400px; 
   object-fit: cover;
   flex-shrink: 0;
-  margin: 8px;
 }
+
 /* Navigation Buttons */
 .small-carousel-prev,
 .small-carousel-next {
@@ -396,7 +398,7 @@ body {
   justify-content: center;
 }
 .small-carousel-prev {
-  left: 10px;
+  left: 0;
 }
 .small-carousel-next {
   right: 0;

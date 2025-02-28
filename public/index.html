@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/home.css" />
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="preload" href="./assets/images/hero-carousel/garden-entrance.jpg" as="image">
+    <link rel="preload" href="./assets/images/background-images/Kitchen.png" as="image">
+    <link rel="preload" href="./assets/images/gallery/image1.jpg" as="image">
+    <link rel="preload" href="./assets/images/gallery/image2.jpeg" as="image">
+    <link rel="preload" href="./assets/images/gallery/image3.webp" as="image">
 
     <!---google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -187,7 +192,7 @@
 
       <!-- Feature video -->
       <section class="property-video">
-        <video autoplay loop muted>
+        <video autoplay loop muted preload="auto" poster="./assets/images/background-images/property-zoom-poster.webp">
           <source
             alt="Property Zoom-in video"
             src="./assets/images/background-images/property-zoom.MP4"
