@@ -283,9 +283,10 @@ document.addEventListener("DOMContentLoaded", function () {
       totalDots = Math.max(1, Math.ceil(smallTotalImages / smallImagesPerView));
       smallCarousel.style.setProperty("--items-per-view", smallImagesPerView);
       smallCurrentIndex = Math.min(smallCurrentIndex, totalDots - 1);
-      const offset = -smallCurrentIndex * (100 / smallImagesPerView);
+      const offset = -(smallCurrentIndex * 100); 
       smallCarousel.style.transform = `translateX(${offset}%)`;
       updateSmallActiveDot();
+      createSmallDots(); 
     }
 
     function updateSmallActiveDot() {
