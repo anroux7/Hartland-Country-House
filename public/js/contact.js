@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    emailjs.init("fq3k-VX3RFjwcvsY0"); // Initialize EmailJS
+    emailjs.init("JQl2DwSabh9P5wKZG"); // Initialize EmailJS
 
     const form = document.getElementById("contact-form");
 
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         console.log("Form Data:", formData); // Debugging
 
-        emailjs.send("service_76pl2bn", "template_zwbzutl", formData)
+        emailjs.send("service_15lxes1", "template_5jsi2gy", formData)
             .then(
                 (response) => {
                     console.log("Email sent successfully!", response);
