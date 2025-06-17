@@ -231,7 +231,6 @@ body {
   filter: invert(1);
 }
 
-
 /* Carousel Container - Full Screen */
 .carousel-container {
   position: relative;
@@ -361,7 +360,7 @@ body {
   position: relative;
   max-width: 100%;
   overflow: hidden;
-  height: auto; 
+  height: auto;
   z-index: 1000;
   margin-bottom: 2rem;
   padding-left: 9px;
@@ -374,7 +373,7 @@ body {
 .small-carousel img {
   width: calc((100% / var(--items-per-view)) - 10px);
   cursor: pointer;
-  max-height: 400px; 
+  max-height: 400px;
   object-fit: cover;
   flex-shrink: 0;
 }
@@ -461,14 +460,14 @@ body {
   color: white;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.5);
-  width: 50px; 
-  height: 50px; 
+  width: 50px;
+  height: 50px;
   border: none;
   z-index: 1001;
   justify-content: center;
   align-items: center;
   font-size: 24px;
-  border-radius: 50%; 
+  border-radius: 50%;
   display: flex;
 }
 .small-lightbox-prev {
@@ -477,7 +476,6 @@ body {
 .small-lightbox-next {
   right: 10px;
 }
-
 
 /* Footer */
 .footer {
@@ -575,7 +573,6 @@ body {
   color: #bbb;
 }
 
-
 /* Buttons */
 .btn {
   color: var(--primary-colour);
@@ -605,7 +602,6 @@ body {
 .btn-secondary:hover {
   background: #d0d3eb;
 }
-
 
 /* Utilities */
 .custom-bullets {
@@ -676,10 +672,23 @@ body {
   .navbar {
     padding: 0 5%;
   }
-  .navbar .main-menu {
+  .navbar .main-menu ul {
     display: none;
   }
-
+  .navbar .header-icons {
+    flex: 0;
+  }
+  .header-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .header-icons .icon {
+    display: flex;
+    flex-direction: row;
+    margin: 0 5px;
+  }
   .navbar .hamburger-button {
     display: block;
   }
@@ -705,10 +714,15 @@ body {
   h2 {
     font-size: 1.25rem;
   }
-  .navbar .main-menu {
+  .navbar .main-menu ul {
     display: none;
   }
-
+  .navbar .logo img {
+    width: 300px;
+  }
+  .header-icons {
+    display: none;
+  }
   .navbar .hamburger-button {
     display: block;
   }
@@ -734,7 +748,13 @@ body {
 }
 
 @media (max-width: 480px) {
-  .navbar .main-menu {
+  .navbar .main-menu ul {
+    display: none;
+  }
+  .navbar .logo img {
+    width: 250px;
+  }
+  .header-icons {
     display: none;
   }
   .navbar .hamburger-button {
